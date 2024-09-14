@@ -1,0 +1,248 @@
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.nav{
+  width: 100vw;
+  opacity: 100;
+  background-color: #fdfff5;
+}
+.list{
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.banner{
+  width:100vw;
+}
+.text{
+  transform:translateY(-50px);
+  opacity: 0;
+  animation: tanima;
+  position: absolute;
+  left:0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tanima {
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  } 
+}
+@media screen and (max-width: 768px){
+  .textResponsive{
+    position: absolute;
+    top:40px !important;
+    left:100px !important;
+    right: 0 !important;
+    width: 400px !important;
+    margin: 0 auto;
+    text-align: center !important;
+ }
+  .span1{
+    font-size: 15px !important;
+    line-height: 2px !important;
+    margin-left: 35px;
+
+  }
+  .span2{
+    font-size: 25px !important;
+    margin-top: 15px !important;
+    margin-left: 5px;
+  }
+  .butResponsive{
+    position: absolute;
+    top:100px !important;
+    background-color: wheat;
+    color: white;
+    width: 100px !important;
+    padding: 3px !important;
+    margin-left: 50px;
+  }
+}
+.span1{
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 50px;
+  animation-delay: 0.9s;
+}
+.span1::after{
+  content:'';
+  width: 150px;
+  height:2px;
+  background-color: gray;
+  display: block;
+  margin-top: 5px;
+}
+.span2{
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  line-height: 70px;
+  animation-delay: 0.4s;
+  margin-top: 60px;
+}
+.control-img{
+  overflow: hidden;
+  position: relative;
+
+}
+
+@media screen and (max-width: 768px){
+  .filterContainer{
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-left: 15px !important;
+    margin-right: 10px !important;
+    grid-column-gap: 15px !important;
+    grid-template-columns: 160px 160px 160px 160px  !important;
+
+  }
+  .handle{
+    text-align: center;
+
+  }
+  .star{
+    margin-left: 40px !important;
+    top: 140px !important;
+  }
+}
+.test{
+  transition: 1s;
+}
+.control-img:hover .test{
+  transform: scale(1.1);
+}
+.control-img::after{
+  content:' ';
+  width: 90%;
+  height:90%;
+  margin:18px;
+  top:-5px;
+  position: absolute;
+  align-items: center;
+  background-color: rgb(102, 100, 100);
+  display: block;
+  transform: scale(0.5) rotate(0deg);
+  transition: 0.5s;
+  opacity:0;
+
+}
+.control-img:hover::after{
+  transform: scale(1) rotate(180deg);
+  opacity: 0.4;
+}
+.trend-title{
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.sub-title{
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #666;
+  
+}
+.catcolor1{
+  color:rgb(151, 149, 149);
+  font-size: 15px;
+
+}
+.catcolor2{
+  font-size: 15px;
+  background-color: rgb(250, 215, 221);
+  padding: 10px;
+}
+.home-product1{
+  position:absolute;
+  width: 500px;
+  text-align: left;
+}
+.home-product2{
+  position: absolute;
+  display: block;
+  top:0;
+  opacity: 0;
+  transition: opacity 1s;
+  text-align: left;
+}
+.handle:hover .home-product2{
+  opacity: 1;
+}
+.rating1{
+  color:#fdfff5;
+}
+.rating2{
+  color:#666;
+  background-color: red;
+}
+.cart{
+  position: absolute;
+  transform: translateY(348px);
+  background-color:rgb(250, 215, 221);
+  padding:4px 8px;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.handle:hover .cart{
+  transform: translateY(325px);
+  opacity: 1;
+}
+.handle:hover .view{
+  transform: translateX(-53px);
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+.handle:hover .heart{
+  transform: translateX(-53px);
+  opacity: 1;
+  transition-duration: 0.6s;
+}
+.paginate-container{
+  text-align: center;
+}
+.react-paginate{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.filter{
+  font-family: "Inter", sans-serif;
+}
+.size{
+  width: 50px;
+  display: inline-block;
+  background-color: #666;
+  margin-left: 20px;
+  cursor: pointer;
+  text-align: center;
+  
+}
+.fav{
+  width: 36px;
+  height: 36px;
+  padding: 9px;
+  opacity: 0;
+  border-radius: 100%;
+  background-color: pink;
+}
+.notShow{
+  opacity: 0;
+  transform: scale(0.5);
+  transition: .5s;
+}
+.show{
+  opacity: 1;
+  transform: scale(1);
+  transition: .5s;
+}
